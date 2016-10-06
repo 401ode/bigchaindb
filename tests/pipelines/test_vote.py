@@ -1,6 +1,7 @@
 from unittest.mock import patch
 
 import rethinkdb as r
+import time
 from multipipes import Pipe, Pipeline
 
 
@@ -258,7 +259,6 @@ def test_valid_block_voting_with_transfer_transactions(monkeypatch, b):
     from bigchaindb_common import crypto, util
     from bigchaindb.models import Transaction
     from bigchaindb.pipelines import vote
-    import time
 
     genesis = b.create_genesis_block()
 
