@@ -1,3 +1,5 @@
+from time import sleep
+
 import pytest
 
 
@@ -560,7 +562,6 @@ class TestTransactionValidation(object):
     def test_non_create_double_spend(self, b, signed_create_tx,
                                      signed_transfer_tx):
         from bigchaindb_common.exceptions import DoubleSpend
-        from time import sleep
 
         block1 = b.create_block([signed_create_tx])
         b.write_block(block1)

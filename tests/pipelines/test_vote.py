@@ -1,7 +1,8 @@
+import time
+
 from unittest.mock import patch
 
 import rethinkdb as r
-import time
 from multipipes import Pipe, Pipeline
 
 
